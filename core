@@ -1,0 +1,40 @@
+import multiprocessing as mp
+#import numpy as np
+import time
+
+def fun(a, b, c, d, e, f):
+    e=e-b*(d/a)
+    f=f-a21*(c/a)
+    x2=f/e
+    x1=(c-(b*x2))/a
+    time.sleep(2)
+    print("Value of X1 is: ",x1)
+    print("Value of X2 is: ",x2)
+'''
+if __name__=='__main__':
+    a11=float(input("Enter value of a11: "))
+    a12=float(input("Enter value of a12: "))
+    a13=float(input("Enter value of a13: "))
+    a21=float(input("Enter value of a21: "))
+    a22=float(input("Enter value of a22: "))
+    a23=float(input("Enter value of a23: "))
+    print("Number of CPU's available :", mp.cpu_count())
+    pool=mp.Pool(mp.cpu_count())
+    pool.apply_async(fun(a11, a12, a13, a21, a22, a23), args=(a11, a12, a13, a21, a22, a23))
+    ts=time.time()
+    pool.close()
+    pool.join()
+    #fun(a11, a12, a13, a21, a22, a23)
+    print("Time in parallel is: ", time.time() - ts)
+'''
+if __name__=='__main__':
+    a11=float(input("Enter value of a11: "))
+    a12=float(input("Enter value of a12: "))
+    a13=float(input("Enter value of a13: "))
+    a21=float(input("Enter value of a21: "))
+    a22=float(input("Enter value of a22: "))
+    a23=float(input("Enter value of a23: "))
+    
+    ts=time.time()
+    fun(a11, a12, a13, a21, a22, a23)
+    print("Time in series is: ", time.time() - ts)
